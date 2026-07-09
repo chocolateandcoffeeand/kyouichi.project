@@ -70,6 +70,10 @@ window.addEventListener('load', () => {
 function updateDiagnosis() {
   if (!diagnosis || !diagnosisResult) return;
   const checked = [...diagnosis.querySelectorAll('input:checked')];
+  diagnosis.querySelectorAll('label').forEach((label) => {
+    const input = label.querySelector('input');
+    label.classList.toggle('selected', Boolean(input?.checked));
+  });
   const score = checked.reduce((sum, input) => sum + Number(input.value), 0);
   localStorage.setItem('kyouichi-diagnosis', JSON.stringify(checked.map((input) => input.parentElement.textContent.trim())));
 
