@@ -366,6 +366,20 @@ h3 { font-size: 24px; }
   object-fit: cover;
   object-position: center;
 }
+.banner-section {
+  padding: 72px 0 24px;
+  background:
+    linear-gradient(180deg, #ffffff 0%, #fffaf2 55%, rgba(106,183,255,.10) 100%);
+}
+.content-banner {
+  width: min(1080px, 100%);
+  margin: 0 auto;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,.82);
+  box-shadow:
+    0 34px 82px -54px rgba(33,49,77,.42),
+    0 0 0 1px rgba(33,49,77,.05);
+}
 .lead { max-width: 620px; font-size: clamp(16px, 2vw, 20px); color: var(--muted); margin: 24px 0 0; }
 .hero-actions, .hero-summary { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
 .hero-actions { max-width: 760px; }
@@ -1148,6 +1162,11 @@ body.ready .reveal.reveal-visible { opacity: 1; transform: none; }
   h1 { font-size: 39px; }
   h2 { font-size: 29px; }
   .hero-banner { border-radius: 12px; }
+  .banner-section { padding: 54px 0 12px; }
+  .content-banner {
+    width: calc(100% + 8px);
+    margin-left: -4px;
+  }
   .hero-actions .button { width: 100%; }
   .hero-summary { display: grid; gap: 8px; }
   .hero-summary span { width: 100%; font-size: 13px; }
